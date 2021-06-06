@@ -1,0 +1,264 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background: rgb(242, 67, 80);
+	background: linear-gradient(
+		90deg,
+		rgba(242, 67, 80, 1) 0%,
+		rgba(140, 10, 20, 1) 100%
+	);
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 1rem;
+	color: #828c96;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+a {
+	color: #072142;
+	text-decoration: none;
+}
+
+nav {
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 20px 30px;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1000;
+}
+
+nav a {
+	color: #ece8e1;
+}
+nav a:hover {
+	opacity: 0.5;
+}
+
+nav .name {
+	font-size: 1.5rem;
+	letter-spacing: 0.1em;
+	display: flex;
+	position: relative;
+}
+
+nav ul {
+	display: flex;
+	position: relative;
+}
+
+nav li {
+	display: flex;
+	margin-right: 2rem;
+	list-style-type: none;
+}
+
+nav li a {
+	display: block;
+	margin-right: 1rem;
+	font-size: 1.5rem;
+	letter-spacing: 0.1em;
+}
+
+article {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	height: 635px;
+}
+
+.wrapper {
+	position: relative;
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
+}
+
+.title {
+	color: #ece8e1;
+	position: absolute;
+	top: 50%;
+	transform: translate3d(0, -50%, 0);
+	z-index: 200;
+	margin-left: 7%;
+	pointer-events: none;
+}
+
+.title h1 {
+	font-size: 6rem;
+	line-height: 0.6;
+	letter-spacing: 0.25em;
+	margin-bottom: 0.2rem;
+	font-weight: 400;
+	text-shadow: 0 10px 20px rgb(2 11 22 / 40%);
+}
+
+.title p {
+	font-size: 2.8rem;
+	font-weight: 100;
+	line-height: 1.5;
+	letter-spacing: 0.1em;
+	margin-right: 100px;
+}
+
+.flex {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	position: relative;
+	color: #000;
+}
+
+.flex .pic {
+	display: block;
+	position: relative;
+	width: 55%;
+	height: 75%;
+	margin: 5% 8% 0 auto;
+	box-shadow: 0 80px 140px -40px rgba(0, 0, 0, 0.6);
+}
+
+.point {
+	cursor: pointer;
+}
+
+.button {
+	display: inline-block;
+	font-size: 1rem;
+	color: #0f1923;
+	background: #ece8e1;
+	line-height: 1;
+	font-weight: bold;
+	padding: 18px 32px;
+	border-radius: 50px;
+	transition: 0.3s;
+	letter-spacing: 00.1em;
+	pointer-events: all;
+}
+
+.button:hover {
+	transform: translate3d(0, -5%, 0);
+	opacity: 1;
+}
+
+footer {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+	height: 635px;
+	background: rgb(19, 19, 19);
+	background: linear-gradient(
+		0deg,
+		rgba(19, 19, 19, 1) 0%,
+		rgba(55, 55, 55, 1) 100%
+	);
+}
+
+aside {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	right: 1%;
+	top: 50%;
+	position: fixed;
+	z-index: 1000;
+	transform: translate3d(0, -50%, 0);
+}
+
+.side {
+	display: block;
+	cursor: pointer;
+	margin-top: 20px;
+	padding: 10px;
+	color: #0f1923;
+	background-color: #ece8e1;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 10px;
+}
+.side:hover {
+	transform: translateX(-5px);
+	opacity: 0.5;
+}
+
+.dope {
+	pointer-events: none;
+}
+
+.active {
+	transform: translateX(-10px);
+}
+
+@media screen and (max-width: 900px) {
+	.pic {
+		margin-right: 40px;
+	}
+	.title {
+		width: 87.5%;
+		margin: 0 6.25%;
+		top: auto;
+		transform: translate3d(0, 0, 0);
+		bottom: 8rem;
+	}
+	.title h1 {
+		font-size: 4rem;
+		line-height: 0.7;
+		letter-spacing: 0.1em;
+		margin-bottom: 0.2rem;
+		text-shadow: 0 10px 20px rgb(2 11 22 / 40%);
+	}
+	.title p {
+		font-size: 1.8rem;
+		line-height: 1.5;
+		letter-spacing: 0.1em;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	body {
+		font-size: 1rem;
+	}
+	nav ul {
+		display: flex;
+		flex-direction: row;
+	}
+	.title {
+		width: 87.5%;
+		margin: 0 6.25%;
+		top: auto;
+		transform: translate3d(0, 0, 0);
+		bottom: 8rem;
+	}
+	.title h1 {
+		font-size: 3rem;
+		line-height: 0.7;
+		letter-spacing: 0.1em;
+		margin-bottom: 0.2rem;
+		text-shadow: 0 10px 20px rgb(2 11 22 / 40%);
+	}
+	.title p {
+		font-size: 1.8rem;
+		line-height: 1.5;
+		letter-spacing: 0.1em;
+	}
+	.pic {
+		width: 80%;
+		height: 55.633%;
+		margin: 0 10%;
+		top: 9%;
+	}
+}

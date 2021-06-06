@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Dicoding</title>
+
+    <link rel="stylesheet" href="assets/styles/style-submission.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0691fe5e35.js" crossorigin="anonymous"></script>
+</head>
+
+<!-- 
+    ================= Kriteria Submission =================
+    1. Memenuhi elemen dibawah ini dengan isi konten sesuai dengan peruntukan elemen tersebut
+        a. <header> (DONE)
+            i. <nav> (DONE)
+        b. <main> (DONE)
+            i. <div id="content"> (DONE)
+                1. <article> (DONE)
+                2. <aside> (DONE)
+        c. <footer> (DONE)
+    2. Menampilkan identitas diri berupa foto asli dan nama sesuai profil Dicoding (DONE)
+    3. Layout responsif dengan menggunakan layout flex/flexbox (DONE)
+    4. Terdapat penerapan JavaScript dalam manipulasi DOM, seperti:
+        a. Dropdown
+        b. Looping dalam menampilkan elemen dan konten 
+        c. Slider (THIS)
+    =======================================================
+ -->
+
+<body>
+    <header>
+        <nav>
+            <a class="name" href="#section-one">Iqbal Arif Firmansyah</a>
+            <ul>
+                <li>
+                    <a href="https://twitter.com/ar_replican">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/iqbi_af/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://dribbble.com/arxgon">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="content">
+            <article id="slide1" class="slide">
+                <div class="wrapper">
+                    <div class="flex">
+                        <div class="title">
+                            <h1>IQBAL ARIF <br></br> FIRMANSYAH</h1>
+                            <p>web profile</p>
+                        </div>
+                        <a href="#" class="point pic" style="background: url(/assets/image/me.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                            <div></div>
+                        </a>
+                    </div>
+                </div>
+            </article>
+            <article id="slide2" class="slide">
+                <div class="wrapper">
+                    <div class="flex">
+                        <div class="title">
+                            <h1>About Me</h1>
+                            <p>just ordinary <mark>creative</mark> human</p>
+                            <a href="#" class="button">Know me more</a>
+                        </div>
+                        <a href="#" class="point pic" style="background: url(/assets/image/me3.jpg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+                            <div></div>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <aside>
+            <a id="prev" class="side" onclick="plus(-1)" ><i class="fas fa-chevron-up"></i></a>
+            <!-- <a id="prev" class="side"  href="#slide1">1</a>
+            <a id="prev" class="side"  href="#slide2">2</a>
+            <a id="prev" class="side"  href="#slide3">3</a> -->
+            <a class="dope side active" onclick="cur(1)"></a>
+            <a class="dope side" onclick="cur(2)"></a>
+            <a class="dope side" onclick="cur(3)"></a>
+            <a id="next" class="side" onclick="plus(1)"><i class="fas fa-chevron-down"></i></a>
+        </aside>
+    </main>
+
+    <footer id="slide3" class="slide">
+        <div class="wrapper">
+            <div class="flex">
+                <div class="title">
+                    <h1>Thanks for <br><br>coming!</h1>
+                    <p>Submission untuk Belajar Dasar Pemrograman Web © 2021, <mark>Dicoding Academy</mark></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/assets/js/submission.js"></script>
+</body>
+</html>
